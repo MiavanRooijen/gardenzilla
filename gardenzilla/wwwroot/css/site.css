@@ -9,3 +9,15 @@ h1 {
 p {
     color: mediumpurple;
 }
+
+nav {
+    
+}
+
+article {
+}
+  
+
+.textcenter{
+    display: flex
+}
