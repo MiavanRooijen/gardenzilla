@@ -11,33 +11,33 @@ header {
 }
 
 
-content{ 
+column{ 
     display: flex;
-    background-color: lightgreen;
-}
-
-footer {
-    background-color: #E3C734;
-    text-align: center;
-    padding: 50px;
     
 }
 
+footer {
+    background-color:#E3C734;
+    text-align: center:
+}        
 nav {
-    width: 20px;
-    color: black;
-    text-align: right;
-    float: left;
     padding: 25px;
     background-color: #FAA646;
+    width: 15vw;
+    color: black;
+    text-align: right;
 }
 
-article {
-    width: 60px;
+article{
+    width: 60vw;
     color: black;
     text-align: left;
-    float: right;
-    padding: 60px 400px;
-    background-color:#BCFA6F;
-   
+    padding: 40px;
+    background-color: #BCFA6F;
 }
+
+
+
+
+
+
