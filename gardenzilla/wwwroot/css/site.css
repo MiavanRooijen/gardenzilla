@@ -1,7 +1,7 @@
 ﻿body {
-
+   
     background-color: lightgreen;
-  
+
 }
 
 
@@ -31,12 +31,17 @@ nav {
     padding: 25px;
     background-color: #FAA646;
     width: 15vw;
+    height: 500px;
     color: black;
     text-align: right;
 }
 
 article{
+    position: relative;
+    left: 350px;
+    top: 200px;
     width: 60vw;
+    height: 500px;
     color: black;
     text-align: left;
     padding: 40px;
