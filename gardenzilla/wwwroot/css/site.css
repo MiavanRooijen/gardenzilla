@@ -13,10 +13,7 @@ header {
 }
 
 
-column{ 
-    display: flex;
-    
-}
+
 
 footer {
     position: fixed;
@@ -31,6 +28,7 @@ nav {
     padding: 25px;
     background-color: #FAA646;
     width: 15vw;
+    height: 200px;
     color: black;
     text-align: right;
 }
@@ -41,6 +39,15 @@ article{
     text-align: left;
     padding: 40px;
     background-color: #BCFA6F;
+}
+
+div {
+    column-count: 2;
+    column-rule-style: solid;
+    column-gap: 0px;
+    column-rule-width: 0px;
+    column-width: 100px;
+    display: flex;
 }
 
 
