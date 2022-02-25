@@ -1,7 +1,6 @@
 ﻿body {
-
     background-color: lightgreen;
-  
+    margin:0px;
 }
 
 
@@ -21,9 +20,9 @@ footer {
     width: 100%;
     background-color:#E3C734;
     text-align: center;
-  
-  
-}        
+    height: 80px;
+}
+
 nav {
     padding: 25px;
     background-color: #FAA646;
