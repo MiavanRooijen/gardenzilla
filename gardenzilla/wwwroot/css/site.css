@@ -27,18 +27,19 @@ footer {
 nav {
     padding: 25px;
     background-color: #FAA646;
-    width: 15vw;
-    height: 200px;
+    width: 200px;
+    
     color: black;
     text-align: right;
 }
 
 article{
-    width: 60vw;
+    width: 1400px;
     color: black;
     text-align: left;
     padding: 40px;
     background-color: #BCFA6F;
+    
 }
 
 div {
@@ -48,6 +49,7 @@ div {
     column-rule-width: 0px;
     column-width: 100px;
     display: flex;
+    height: 550px;
 }
 
 
