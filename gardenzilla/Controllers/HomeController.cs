@@ -40,8 +40,31 @@ namespace gardenzilla.Controllers
         }
 
         [Route("contact")]
-        public IActionResult Contact()
+        public IActionResult Contact(string Naam, string Email)
         {
+            ViewData ["Naam"] = Naam;
+            ViewData ["Email"] = Email;
+            return View();
+        }
+
+        [Route("terrein")]
+        public IActionResult Terrein()
+        {
+           
+            return View();
+        }
+
+        [Route("gallerij")]
+        public IActionResult Gallerij()
+        {
+            
+            return View();
+        }
+
+        [Route("festivals")]
+        public IActionResult Festivals()
+        {
+            
             return View();
         }
     }
