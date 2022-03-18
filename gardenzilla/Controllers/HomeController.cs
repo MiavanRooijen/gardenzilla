@@ -39,12 +39,11 @@ namespace gardenzilla.Controllers
             return View();
         }
 
-        [Route("contact")]
-        public IActionResult Contact(string Naam, string Email)
+        [Route("Contact")]
+        public IActionResult Contact( Person person)
         {
-            ViewData ["Naam"] = Naam;
-            ViewData ["Email"] = Email;
-            return View();
+            
+            return View(person);
         }
 
         [Route("terrein")]
