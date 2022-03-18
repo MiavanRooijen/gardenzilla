@@ -2,9 +2,16 @@
 @{
     ViewData["Title"] = "Contact";
 }
+
+<h1>@ViewData["Title"] </h1>
 <form method = "post"> 
-    Voornaam: <input type= "text" name= "firstname" /> <br />
-    Achternaam: <input type= "text" name= "lastname" /> <br />
+    <div>Voornaam: <input type= "text" name= "firstname" />  </div>
+    <div>Acternaam: <input type= "text" name= "lastname" />  </div>
+    <div>Email: <input type= "text" name= "email" />  </div>
+    <div>Telefoon: <input type= "text" name= "phone" />  </div>
+    <div>Adres: <input type= "text" name= "address" />  </div>
+    <div>Beschrijving: <input type= "text" name= "description" />  </div>
     
     <input type= "submit" value = "verstuur" />
 </form>
+
