@@ -1,10 +1,10 @@
 using System.ComponentModel.DataAnnotations;
 namespace gardenzilla.Models
-{ 
-public class Person
 {
-    [Required ]
-    public string FirstName { get; set; }
+    public class Person
+    {
+        [Required]
+        public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
         [Required]
@@ -15,5 +15,7 @@ public class Person
         public string Address { get; set; }
         [Required]
         public string Description { get; set; }
-}
+        
+    }
+ 
 }
