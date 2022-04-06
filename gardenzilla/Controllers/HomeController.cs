@@ -39,9 +39,15 @@ namespace gardenzilla.Controllers
             return View();
         }
 
+        [Route("contact")]
+        public IActionResult contact()
+        {
+            return View();
+        }
+
         [HttpPost]
-        [Route("Contact")]
-        public IActionResult Contact( Person person)
+        [Route("contact")]
+        public IActionResult contact( Person person)
         {
             if (ModelState.IsValid)
                 return Redirect("/succes");
@@ -69,5 +75,12 @@ namespace gardenzilla.Controllers
             
             return View();
         }
+
+        [Route("succes")]
+        public IActionResult Succes()
+        {
+            return View();
+        }
+
     }
 }
