@@ -2,9 +2,22 @@
 @{
     ViewData["Title"] = "Contact";
 }
+
+<h1>@ViewData["Title"] </h1>
 <form method = "post"> 
-    Voornaam: <input type= "text" name= "firstname" /> <br />
-    Achternaam: <input type= "text" name= "lastname" /> <br />
+    <div>Voornaam: <input type= "text" name= "firstname" />  </div>
+    @Html.ValidationMessageFor(m => m.FirstName)
+    <div>Acternaam: <input type= "text" name= "lastname" />  </div>
+        @Html.ValidationMessageFor(m => m.LastName)
+    <div>Email: <input type= "text" name= "email" />  </div>
+        @Html.ValidationMessageFor(m => m.Email)
+    <div>Telefoon: <input type= "text" name= "phone" />  </div>
+        @Html.ValidationMessageFor(m => m.Phone)
+    <div>Adres: <input type= "text" name= "address" />  </div>
+    @Html.ValidationMessageFor(m => m.Address)
+    <div>Beschrijving: <input type= "text" name= "description" />  </div>
+        @Html.ValidationMessageFor(m => m.Description)
     
     <input type= "submit" value = "verstuur" />
 </form>
+
