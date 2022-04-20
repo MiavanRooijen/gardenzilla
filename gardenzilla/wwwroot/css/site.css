@@ -10,6 +10,8 @@ header {
     padding: 100px;
     font-size: 30px;
     height: 1px;
+    font-size: 50px;
+    color:azure;
 }
 
 
@@ -60,6 +62,18 @@ div {
     margin-left: 10px;
 }
 
+button{
+    width: 200px;
+    height: 120px;
+    margin: 0px 0px 0px 0px;
+    border:none;
+    border-radius: 15px;
+    background-color:#FAA646;
+    color:azure;
+    font-size:30px;
+    cursor:hand;
+    cursor:pointer;
+}
 
 /* Navbar container */
 .navbar {
