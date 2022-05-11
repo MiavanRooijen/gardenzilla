@@ -14,8 +14,16 @@ header {
     color:azure;
 }
 
+img.homepage{
+    width:  10  px;
 
+}
 
+img.logo {
+    margin: auto 1px;
+    float: left;
+    width: 10%;
+}
 
 footer {
     position: fixed;
