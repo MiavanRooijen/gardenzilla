@@ -5,54 +5,47 @@
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel='shortcut icon' type='image/png' href='images/favicon.jpg.png' />
     <head>
- <style>
-img {
-  margin: auto 1px;
-  float: left;
-  width: 10%;
- 
-}
-</style>
-</head>
-<body>
+        <style>
+            img {
+                margin: 0;
+                float: left;
+                width: 10%;
+            }
+        </style>
+    </head>
+    <body>
 
 
-<img rel='shortcut icon' type='image/png' href='images/favicon.jpg.png' />
+        <img rel='shortcut icon' type='image/png' href='images/favicon.jpg.png' />
 
-</body>
+    </body>
 
 </head>
 
 <body>
     <header>
-       
+
         <img src="images/favicon.jpg.png">
         Gardenzilla
     </header>
-    
+
     <div class="column">
-        
+
         <nav>
-             <a class= "homepagina" href="http://localhost:54757/" role="button" </a>
-            <button class= "homepagina" >home </button>
-            <a class= "festivalspagina" href="festivals" role="button"</a>
-                 <button class="festivalspagina" >festivals </button>
-            <a class="terreinpagina" href="terrein" role="button"</a>
-                 <button class="terreinpagina" >terrein </button>
-            <a class= "gallerijpagina" href="gallerij" role="button"</a>
-                <button class="gallerijpagina" >gallerij </button>
-            <a class= "contactpagina" href="contact" role="button"</a>
-            <button class="contactpagina" >contact </button>
-         
+            <a class="homepagina" href="/" >home</a>
+            <a class="festivalspagina" href="/festivals" >festivals</a>
+            <a class="terreinpagina" href="/terrein" >terrein</a>
+            <a class="gallerijpagina" href="/gallerij" >gallerij</a>
+            <a class="contactpagina" href="/contact" >contact</a>
         </nav>
 
 
         <article>
-           @RenderBody()
-           
+            @RenderBody()
+
         </article>
-        
+
     </div>
-     <footer> footer</footer>
+    <footer> footer</footer>
 </body>
 </html>

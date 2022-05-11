@@ -1,9 +1,12 @@
-﻿@{
+﻿@model List<string>
+@{
     ViewData["Title"] = "Home";
-  
-
 }
 
-
-<h1> Dit is het verhaal van de homepage</h1>
-<img src= "images/plaatjehomepagewebsite.jpg" />
+< div class='text-center'>
+    <h1>Alle namen!</h1>  
+    @foreach(string naam in Model)
+    {
+        <p>@naam</p>
+    }
+    </div>
