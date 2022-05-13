@@ -70,7 +70,7 @@ div {
     margin-left: 10px;
 }
 
-button{
+nav a{
     width: 200px;
     height: 120px;
     margin: 0px 0px 0px 0px;
@@ -81,6 +81,7 @@ button{
     font-size:30px;
     cursor:hand;
     cursor:pointer;
+    text-decoration:none;
 }
 
 /* Navbar container */
