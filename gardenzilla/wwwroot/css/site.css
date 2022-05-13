@@ -65,12 +65,12 @@ div {
 nav a{
     width: 200px;
     height: 120px;
-    margin: 0px 0px 0px 0px;
+    margin: 5px 5px 5px 5px;
     border:none;
     border-radius: 15px;
     background-color:#FAA646;
     color:azure;
-    font-size:30px;
+    font-size:100px;
     cursor:hand;
     cursor:pointer;
     text-decoration:none;
