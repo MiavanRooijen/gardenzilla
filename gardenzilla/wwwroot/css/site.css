@@ -61,9 +61,7 @@ div {
     height: 700px;
 }
 
-.contactform label {
-    width: 10px;
-}
+
 
 .contactform .field-validation-error {
     color: red;
