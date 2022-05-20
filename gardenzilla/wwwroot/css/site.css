@@ -14,12 +14,9 @@ header {
     color:azure;
 }
 
-img.homepage{
-    width:  10  px;
 
-}
 
-img.logo {
+img {
     margin: auto 1px;
     float: left;
     width: 10%;
@@ -58,8 +55,11 @@ div {
     column-rule-width: 0px;
     column-width: 100px;
     display: flex;
-    height: 700px;
+    
+  
 }
+
+
 
 
 
