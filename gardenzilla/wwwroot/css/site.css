@@ -15,9 +15,9 @@ header {
 }
 
 
-img {
-    
+.homepage {
     margin: 0;
+    width: 10000px;
 }
 
 footer {
