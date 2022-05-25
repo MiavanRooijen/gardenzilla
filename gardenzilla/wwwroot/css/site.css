@@ -16,11 +16,9 @@ header {
 }
 
 
-
-img {
-    margin: auto 1px;
-    float: left;
-    width: 10%;
+.homepage {
+    margin: 0;
+    width: 10000px;
 }
 
 footer {
