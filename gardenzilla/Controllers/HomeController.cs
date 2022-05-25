@@ -16,18 +16,23 @@ namespace gardenzilla.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public List<Festival> GetAllFestivals ()
         {
             // alle producten ophalen
             var rows = DatabaseConnector.GetRows("select * from product");
 
             // lijst maken om alle namen in te stoppen
-            List<string> names = new List<string>();
+            List<Festival> festivals = new List<festival>();
 
             foreach (var row in rows)
             {
                 // elke naam toevoegen aan de lijst met namen
-                names.Add(row["naam"].ToString());
+                Festival f = new Festival();
+                f.Naam = row["naam"].ToString();
+                f.Prijs = row["prijs"].ToString();
+                f.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+                f.id = Convert.ToInt32(row["id"]);
+                
             }
 
             // de lijst met namen in de html stoppen
@@ -97,7 +102,10 @@ namespace gardenzilla.Controllers
         public IActionResult FestivalDetails(int id)
         {
             var festival = GetFestival(id);
-            return View();
+            return View(festival);
+        }
+
+      
         }
     }
 }
