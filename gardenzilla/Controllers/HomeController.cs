@@ -93,5 +93,11 @@ namespace gardenzilla.Controllers
             return View();
         }
 
+        [Route("festival/{id}")]
+        public IActionResult FestivalDetails(int id)
+        {
+            var festival = GetFestival(id);
+            return View();
+        }
     }
 }
