@@ -1,10 +1,12 @@
-﻿using MySql.Data.MySqlClient;
+﻿using gardenzilla.Models;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 
 namespace gardenzilla.Database
 {
     public static class DatabaseConnector
     {
+        private static string connectionString;
 
         public static List<Dictionary<string, object>> GetRows(string query)
         {

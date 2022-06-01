@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Diagnostics;
 using gardenzilla.Database;
+using System;
 
 namespace gardenzilla.Controllers
 {
@@ -32,11 +33,14 @@ namespace gardenzilla.Controllers
                 f.Prijs = row["prijs"].ToString();
                 f.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
                 f.id = Convert.ToInt32(row["id"]);
-                
+
+                Festival.Add(f);
             }
 
+            return festivals;
+
             // de lijst met namen in de html stoppen
-            return View(names);
+            
         }
 
         public IActionResult Privacy()
@@ -105,7 +109,24 @@ namespace gardenzilla.Controllers
             return View(festival);
         }
 
-      
+
+        public IActionResult Index()
+        {
+            var festivals = GetAllFestivals();
+            // alle producten ophalen
+            var rows = DatabaseConnector.GetRows("select * from product");
+
+            // lijst maken om alle namen in te stoppen
+            List<string> names = new List<string>();
+
+            foreach (var row in rows)
+            {
+                // elke naam toevoegen aan de lijst met namen
+                names.Add(row["naam"].ToString());
+            }
+
+            // de lijst met namen in de html stoppen
+            return View(festivals);
         }
     }
 }

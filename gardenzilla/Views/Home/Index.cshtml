@@ -27,3 +27,15 @@
 </form>
 
 
+<div class='text-center'>
+    <h1>Alle namen!</h1>
+    @if(Model != null)
+    {
+        @foreach(string naam in Model)
+        {
+            <p>@naam</p>
+        }
+    }
+
+    
+</div>

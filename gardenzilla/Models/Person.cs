@@ -33,3 +33,14 @@ namespace gardenzilla.Models
     }
  
 }
+
+namespace gardenzilla.Database
+{
+    public class Festival
+    {
+        public int id { get; set; }
+        public string? Naam { get; set; }
+        public string Prijs { get; set; }
+        public int Beschikbaarheid { get; set; }
+    }
+}
