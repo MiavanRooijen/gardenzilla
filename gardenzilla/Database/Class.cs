@@ -10,7 +10,12 @@ using System.Threading.Tasks;
 
 namespace gardenzilla.Database
 {
-    public class Class Fesival
+    public class Product
     {
+        public int Id { get; set; }
+        public string? Naam { get; set; }
+        public string? Prijs { get; set; }
+        public int Beschikbaarheid { get; set; }
+
     }
 }

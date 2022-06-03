@@ -17,27 +17,27 @@ namespace gardenzilla.Controllers
             _logger = logger;
         }
 
-        public List<Festival> GetAllFestivals ()
+        public List<Product> GetAllProducts()
         {
             // alle producten ophalen
             var rows = DatabaseConnector.GetRows("select * from product");
 
             // lijst maken om alle namen in te stoppen
-            List<Festival> festivals = new List<festival>();
+            List<Product> products = new List<Product>();
 
             foreach (var row in rows)
             {
                 // elke naam toevoegen aan de lijst met namen
-                Festival f = new Festival();
-                f.Naam = row["naam"].ToString();
-                f.Prijs = row["prijs"].ToString();
-                f.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
-                f.id = Convert.ToInt32(row["id"]);
+                Product p = new Product();
+                p.Naam = row["naam"].ToString();
+                p.Prijs = row["prijs"].ToString();
+                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+                p.Id = Convert.ToInt32(row["id"]);
 
-                Festival.Add(f);
+                products.Add(p);
             }
 
-            return festivals;
+            return products;
 
             // de lijst met namen in de html stoppen
             
@@ -102,31 +102,25 @@ namespace gardenzilla.Controllers
             return View();
         }
 
-        [Route("festival/{id}")]
-        public IActionResult FestivalDetails(int id)
+        [Route("product/{id}")]
+        public IActionResult ProductDetails(int id)
         {
-            var festival = GetFestival(id);
-            return View(festival);
+            var products = GetProduct(id);
+            return View(products);
         }
 
 
         public IActionResult Index()
         {
-            var festivals = GetAllFestivals();
+           var products = GetAllProducts();
             // alle producten ophalen
-            var rows = DatabaseConnector.GetRows("select * from product");
+            
 
-            // lijst maken om alle namen in te stoppen
-            List<string> names = new List<string>();
-
-            foreach (var row in rows)
-            {
-                // elke naam toevoegen aan de lijst met namen
-                names.Add(row["naam"].ToString());
-            }
+            
+            
 
             // de lijst met namen in de html stoppen
-            return View(festivals);
+            return View(products);
         }
     }
 }
