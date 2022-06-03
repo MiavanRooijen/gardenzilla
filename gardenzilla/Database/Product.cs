@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-
-
-
-
-
-namespace gardenzilla.Database
+﻿namespace gardenzilla.Database
 {
     public class Product
     {

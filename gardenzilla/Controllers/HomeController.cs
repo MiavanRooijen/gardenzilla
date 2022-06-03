@@ -17,31 +17,15 @@ namespace gardenzilla.Controllers
             _logger = logger;
         }
 
-        public List<Product> GetAllProducts()
+        public IActionResult Index()
         {
             // alle producten ophalen
-            var rows = DatabaseConnector.GetRows("select * from product");
-
-            // lijst maken om alle namen in te stoppen
-            List<Product> products = new List<Product>();
-
-            foreach (var row in rows)
-            {
-                // elke naam toevoegen aan de lijst met namen
-                Product p = new Product();
-                p.Naam = row["naam"].ToString();
-                p.Prijs = row["prijs"].ToString();
-                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
-                p.Id = Convert.ToInt32(row["id"]);
-
-                products.Add(p);
-            }
-
-            return products;
+            var products = GetAllProducts();
 
             // de lijst met namen in de html stoppen
-            
+            return View(products);
         }
+
 
         public IActionResult Privacy()
         {
@@ -109,18 +93,53 @@ namespace gardenzilla.Controllers
             return View(products);
         }
 
-
-        public IActionResult Index()
+        private Product GetProduct(int id)
         {
-           var products = GetAllProducts();
             // alle producten ophalen
-            
+            var rows = DatabaseConnector.GetRows($"select * from product where id = {id}");
 
-            
-            
+            // lijst maken om alle namen in te stoppen
+            List<Product> products = new List<Product>();
+
+            foreach (var row in rows)
+            {
+                // elke naam toevoegen aan de lijst met namen
+                Product p = new Product();
+                p.Naam = row["naam"].ToString();
+                p.Prijs = row["prijs"].ToString();
+                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+                p.Id = Convert.ToInt32(row["id"]);
+
+                products.Add(p);
+            }
+
+            return products[0];
+        }
+
+        public List<Product> GetAllProducts()
+        {
+            // alle producten ophalen
+            var rows = DatabaseConnector.GetRows("select * from product");
+
+            // lijst maken om alle namen in te stoppen
+            List<Product> products = new List<Product>();
+
+            foreach (var row in rows)
+            {
+                // elke naam toevoegen aan de lijst met namen
+                Product p = new Product();
+                p.Naam = row["naam"].ToString();
+                p.Prijs = row["prijs"].ToString();
+                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+                p.Id = Convert.ToInt32(row["id"]);
+
+                products.Add(p);
+            }
+
+            return products;
 
             // de lijst met namen in de html stoppen
-            return View(products);
+
         }
     }
 }
