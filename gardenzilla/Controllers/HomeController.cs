@@ -103,14 +103,7 @@ namespace gardenzilla.Controllers
 
             foreach (var row in rows)
             {
-                // elke naam toevoegen aan de lijst met namen
-                Product p = new Product();
-                p.Naam = row["naam"].ToString();
-                p.Prijs = row["prijs"].ToString();
-                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
-                p.Id = Convert.ToInt32(row["id"]);
-
-                products.Add(p);
+                Product product = GetProductFromRow(rows[0]);
             }
 
             return products[0];
@@ -127,11 +120,7 @@ namespace gardenzilla.Controllers
             foreach (var row in rows)
             {
                 // elke naam toevoegen aan de lijst met namen
-                Product p = new Product();
-                p.Naam = row["naam"].ToString();
-                p.Prijs = row["prijs"].ToString();
-                p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
-                p.Id = Convert.ToInt32(row["id"]);
+                Product p = GetProductFromRow(row);
 
                 products.Add(p);
             }
@@ -141,5 +130,18 @@ namespace gardenzilla.Controllers
             // de lijst met namen in de html stoppen
 
         }
+
+
+        private Product GetProductFromRow(Dictionary<string, object> row)
+        {
+            Product p = new Product();
+            p.Naam = row["naam"].ToString();
+            p.Prijs = row["prijs"].ToString();
+            p.Beschikbaarheid = Convert.ToInt32(row["beschikbaarheid"]);
+            p.Id = Convert.ToInt32(row["id"]);
+
+            return p;
+        }
+
     }
 }
