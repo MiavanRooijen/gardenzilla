@@ -17,10 +17,18 @@ header {
     color:azure;
 }
 
-img {
-    width: 1200px;
-    height: 200px;
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
+
+    .products a {
+        background-color: #298760;
+        text-decoration: none;
+        padding: 20px;
+        color: white;
+    }
 
 .homepage {
     margin: 0;

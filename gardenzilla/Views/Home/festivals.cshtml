@@ -1,4 +1,4 @@
-﻿@model List<string>
+﻿
 @{
     ViewData["Title"] = "Festivals";
 }
@@ -9,15 +9,3 @@
 <img src = "images/yuh.jpg" />
 <p>Verhaal van de festivals</p>
 
-<div class='text-center'>
-    <h1>Alle namen!</h1>
-    @if(Model != null)
-    {
-        @foreach(string naam in Model)
-        {
-            <p>@naam</p>
-        }
-    }
-
-    
-</div>

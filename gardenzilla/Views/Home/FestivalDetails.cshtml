@@ -1,4 +1,10 @@
-﻿@{
+﻿@using gardenzilla.Database
+@model Festival
+@{
     ViewData["Title"] = "details";
 }
-<h1>dit is de detailpagina</h1>
+<div>
+    <h1 >@Model.Naam</h1>
+    <p>@Model.Beschrijving</p>
+</div>
+

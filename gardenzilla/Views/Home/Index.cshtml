@@ -1,4 +1,4 @@
-﻿@model List<Product>
+﻿@model List<Festival>
 @using gardenzilla.Database
 @{
     ViewData["Title"] = "Home";
@@ -29,16 +29,14 @@
 
 
 <div class='text-center'>
-    <h1 class= "display-4"></h1>
-    <ul>
-    @if(Model != null)
-    {
-        @foreach(var product in Model)
-        {
-            <li> @product.Naam - @product.Prijs - @product.Beschikbaarheid </li>
-        }
-    }
-    </ul>
+    <h1 class="display-4">Alle producten</h1>
+
+ <div class="products">
+
+  @foreach (Festival festival in Model)
+  {
+    <a href="/festival/@festival.Id">@festival.Naam</a>
+  }
 
     
 </div>
