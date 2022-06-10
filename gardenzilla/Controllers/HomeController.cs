@@ -19,11 +19,8 @@ namespace gardenzilla.Controllers
 
         public IActionResult Index()
         {
-            // alle producten ophalen
-            var festivals = GetAllFestivals();
-
-            // de lijst met namen in de html stoppen
-            return View(festivals);
+           
+            return View();
         }
 
 
@@ -76,8 +73,11 @@ namespace gardenzilla.Controllers
         [Route("festivals")]
         public IActionResult Festivals()
         {
-            
-            return View();
+            // alle producten ophalen
+            var festivals = GetAllFestivals();
+
+            // de lijst met namen in de html stoppen
+            return View(festivals);
         }
 
         [Route("succes")]
