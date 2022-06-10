@@ -50,9 +50,13 @@ namespace gardenzilla.Controllers
         [Route("contact")]
         public IActionResult contact( Person person)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) {
+                // opslaan
+                DatabaseConnector.SavePerson(person);
+
                 return Redirect("/succes");
-            
+            }
+
             return View(person);
         }
 

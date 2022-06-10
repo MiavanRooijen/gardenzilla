@@ -6,7 +6,8 @@ namespace gardenzilla.Database
 {
     public static class DatabaseConnector
     {
-        private static string connectionString;
+        private static string connectionString = "Server=172.16.160.21;Port=3306;Database=gardenzilla;Uid=gardenzilla;Pwd=I0QBJPy51P45QKcP;";
+
 
         public static List<Dictionary<string, object>> GetRows(string query)
         {
