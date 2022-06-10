@@ -17,6 +17,10 @@ header {
 header p{
     margin:0;
 }
+.gallery{
+    width: 20px;
+    height: 15px;
+}
 
 .header-image {
     width: 250px;
