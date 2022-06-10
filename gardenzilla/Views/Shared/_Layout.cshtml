@@ -4,32 +4,15 @@
 <head>
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel='shortcut icon' type='image/png' href='images/favicon.jpg.png' />
-    <head>
-        <style>
-            img {
-                margin: 0;
-                float: left;
-                width: 10%;
-            }
-        </style>
-    </head>
-    <body>
-
-
-        <img rel='shortcut icon' type='image/png' href='images/favicon.jpg.png' />
-
-    </body>
-
 </head>
 
 <body>
     <header>
-
-        <img src="images/favicon.jpg.png">
-        Gardenzilla
+        <img class="header-image" src="images/favicon.jpg.png">
+        <p>Gardenzilla</p>
     </header>
 
-    <div class="column">
+    <div class="columns">
 
         <nav>
             <a class="homepagina" href="/" >home</a>
@@ -42,7 +25,6 @@
 
         <article>
             @RenderBody()
-
         </article>
 
     </div>
