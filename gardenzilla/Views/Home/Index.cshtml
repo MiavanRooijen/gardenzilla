@@ -1,5 +1,4 @@
-﻿@model List<Festival>
-@using gardenzilla.Database
+﻿
 @{
     ViewData["Title"] = "Home";
 }
@@ -7,14 +6,4 @@
 <img src="homepagejpg/plaatjehomepagewebsite.jpg" />
 
 
-<div class='text-center'>
-    <h1 class="display-4">Alle producten</h1>
 
-    <div class="products">
-
-        @foreach (Festival festival in Model)
-        {
-            <a href="/festival/@festival.Id">@festival.Naam</a>
-        }
-    </div>
-</div>
